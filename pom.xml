@@ -19,6 +19,11 @@
 		        <groupId>com.heroku.sdk</groupId>
 		        <artifactId>heroku-maven-plugin</artifactId>
 		        <version>1.1.3</version>
+		        <configuration>
+		        	 <processTypes>
+					    <web>java $JAVA_OPTS -cp target/classes:target/dependency/* KitchenSinkController</web>
+					 </processTypes>
+				</configuration>
 		     </plugin>
 		</plugins>
 	</build>
@@ -55,4 +60,5 @@
 		    <version>3.1</version>
 		</dependency>
 	</dependencies>
+	
 </project>
